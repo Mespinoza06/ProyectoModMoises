@@ -1,0 +1,14 @@
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\obj\Debug\net8.0\Modificado por Moises.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\obj\Debug\net8.0\Modificado por Moises.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\obj\Debug\net8.0\Modificado por Moises.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\obj\Debug\net8.0\Modificado por Moises.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\bin\Debug\net8.0\Modificado por Moises.exe
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\bin\Debug\net8.0\Modificado por Moises.deps.json
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\bin\Debug\net8.0\Modificado por Moises.runtimeconfig.json
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\bin\Debug\net8.0\Modificado por Moises.dll
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\bin\Debug\net8.0\Modificado por Moises.pdb
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\obj\Debug\net8.0\Modificado por Moises.dll
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\obj\Debug\net8.0\refint\Modificado por Moises.dll
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\obj\Debug\net8.0\Modificado por Moises.pdb
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\obj\Debug\net8.0\Modificado por Moises.genruntimeconfig.cache
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\obj\Debug\net8.0\ref\Modificado por Moises.dll
