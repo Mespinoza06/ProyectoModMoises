@@ -2,10 +2,10 @@
 class Program
 {
     static string[] estudiantes = new string[10];
-    static string[] cedula = new string[10];
-    static string[] nombre = new string[10];
-    static int[] promedio = new int[10];
-    static string[] condicion = new string[10];
+    static string[] cedula = new string[2];
+    static string[] nombre = new string[2];
+    static int[] promedio = new int[2];
+    static string[] condicion = new string[2];
     static string buscar = "";
     static bool encontrada = false;
     static int modificar = 0;
@@ -14,7 +14,12 @@ class Program
     static int newProm = 0;
     static string continuar = "";
     static  int contador = 0;
-
+    static string nombres = "";
+    static string repCondi = "";
+    static int indice = 0;
+    static int mayor = 0;
+    static int menor = 0;
+    static int[] alto=new int[2];
     static void Main(string[] args)
     {
         while (true)
@@ -83,14 +88,74 @@ class Program
             {
                 case "1":
                     Console.WriteLine("Generando reporte de estudiantes por condición...");
+
+                    Console.WriteLine("Digite la Condicion de los estudiantes que desea buscar");
+                    repCondi = Console.ReadLine();
+
+                    foreach (var item in condicion)
+                    {
+                        
+                        Console.WriteLine($"Cedula :{cedula[indice]} Nombre :{nombre[indice]} Promedio :{promedio[indice]} Condicion :{item}");
+                        indice++;
+                    }
+                    
+
+
                     break;
                 case "2":
                     Console.WriteLine("Generando reporte con todos los datos de los estudiantes...");
+
+
+
+                    
+                    for (int i = 0; i <cedula.Length; i++)
+                    {
+                        if (promedio[i] >= mayor)
+                        {
+                            mayor = promedio[i];
+                            alto[i] = mayor;
+
+                            
+                        }
+                        else if (promedio[i] < mayor)
+                        {
+                            menor = promedio[i];
+                        }
+                        
+                    }
+                    Console.WriteLine("*******Los estudiantes con las notas mas altas son:********");
+                    for (int j = 0; j < cedula.Length; j++)
+                    {
+                        if (promedio[j] == mayor)
+                        {
+
+
+                            Console.WriteLine("=============================================================================================");
+                            Console.WriteLine($"Cédula: {cedula[j]} Nombre: {nombre[j]} Promedio: {promedio[j]} Condición: {condicion[j]}  ");
+                            Console.WriteLine("=============================================================================================");
+
+                           
+                        }
+                    }
+                    Console.WriteLine("********Los estudiantes con las notas mas Bajas son:********");
+                    for (int j = 0; j < cedula.Length; j++)
+                    {
+                        if (promedio[j] == menor)
+                        {
+
+
+                            Console.WriteLine("=============================================================================================");
+                            Console.WriteLine($"Cédula: {cedula[j]} Nombre: {nombre[j]} Promedio: {promedio[j]} Condición: {condicion[j]}  ");
+                            Console.WriteLine("=============================================================================================");
+
+
+                        }
+                    }
                     break;
                 case "3":
                     return;
                 default:
-                    Console.WriteLine("Opción inválida. Por favor, seleccione una opción válida.");
+                    Console.WriteLine("Opción inválida. Por favor, seleccione una opción válida."+promedio);
                     break;
             }
         }
@@ -99,84 +164,78 @@ class Program
     static void IncluirEstudiante()
     {
         bool validar = false;
-        do
+        try
         {
-            try
+            for (int i = 0; i < cedula.Length; i++)
             {
-                for (int i = 0; i < 10; i++)
+                Console.WriteLine("Digite la Cedula del Estudiante " + (i + 1));
+                cedula[i] = Console.ReadLine();
+
+                Console.WriteLine("Digite el Nombre del Estudiante " + (i + 1));
+                nombres = Console.ReadLine();
+                nombre[i] = nombres.ToLower();
+
+                Console.WriteLine("Digite promedio del estudiante " + (i + 1));
+                promedio[i] = int.Parse(Console.ReadLine());
+
+                if (promedio[i] >= 70)
                 {
-                    Console.WriteLine("Digite la Cedula del Estudiante" + (i + 1));
-                    cedula[i] = Console.ReadLine();
-
-                    Console.WriteLine("Digite el Nombre del Estudiante" + (i + 1));
-                    nombre[i] = Console.ReadLine();
-
-                    Console.WriteLine("Digite promedio del estudiante" + (i + 1));
-                    promedio[i] = int.Parse(Console.ReadLine());
-
-                    if (promedio[i] >= 70)
-                    {
-                        condicion[i] = "Aprobado";
-                    }
-                    else if (promedio[i] < 70 && promedio[i] >= 60)
-                    {
-                        condicion[i] = "Reprobado";
-                    }
-                    else if (promedio[i] < 60)
-                    {
-                        condicion[i] = "Reprobado";
-                    }
-
+                    condicion[i] = "Aprobado";
+                }
+                else if (promedio[i] < 70 && promedio[i] >= 60)
+                {
+                    condicion[i] = "Aplazado";
+                }
+                else if (promedio[i] < 60)
+                {
+                    condicion[i] = "Reprobado";
                 }
 
             }
-            catch (Exception error1)
-            {
 
-                Console.WriteLine("error");
-                validar= true;
-            }
+        }
+        catch (Exception error1)
+        {
 
-        } while (true);
-        
+            Console.WriteLine("error");
+            validar = true;
+        }
     }
     static void ConsultarEstudiantes()
     {
         bool validar = false;
-        do
+        try
         {
-            try
+            Console.WriteLine("Digite el número de cédula del estudiante que desea consultar");
+            string buscar = Console.ReadLine();
+            bool encontrada = false;
+
+            for (int i = 0; i < cedula.Length; i++)
             {
-                Console.WriteLine("Digite el número de cédula del estudiante que desea consultar");
-                string buscar = Console.ReadLine();
-                bool encontrada = false;
-
-                for (int i = 0; i < cedula.Length; i++)
+                if (cedula[i] == buscar)
                 {
-                    if (cedula[i] == buscar)
-                    {
-                        Console.WriteLine("=============================================================================================");
-                        Console.WriteLine($"Cédula: {cedula[i]} Nombre: {nombre[i]} Promedio: {promedio[i]} Condición: {condicion[i]}  ");
-                        Console.WriteLine("=============================================================================================");
 
-                        encontrada = true;
-                        break; // Salir del bucle una vez que se encuentra la cédula
-                    }
-                }
 
-                if (!encontrada)
-                {
-                    Console.WriteLine("No se encontró ningún estudiante con esa cédula.");
+                    Console.WriteLine("=============================================================================================");
+                    Console.WriteLine($"Cédula: {cedula[i]} Nombre: {nombre[i]} Promedio: {promedio[i]} Condición: {condicion[i]}  ");
+                    Console.WriteLine("=============================================================================================");
+
+                    encontrada = true;
+                    break; // Salir del bucle una vez que se encuentra la cédula
                 }
             }
-            catch (Exception error2)
-            {
-                Console.WriteLine("Error de formato, intente de nuevo");
-                validar= true;
-            }
 
-        } while (true);
-        
+            if (!encontrada)
+            {
+                Console.WriteLine("No se encontró ningún estudiante con esa cédula.");
+            }
+        }
+        catch (Exception error2)
+        {
+            Console.WriteLine("Error de formato, intente de nuevo");
+            validar = true;
+        }
+
     }
     static void ModificarEstudiantes()
     {
@@ -234,6 +293,7 @@ class Program
                                     {
                                         condicion[i] = "Reprobado";
                                     }
+
                                     break;
 
                                 default:
@@ -249,7 +309,7 @@ class Program
                             }
 
                         } while (true); // Bucle de modificación
-                        break; // Salir del bucle principal una vez que se modifica el estudiante
+                         // Salir del bucle principal una vez que se modifica el estudiante
                     }
                 }
 
@@ -267,7 +327,7 @@ class Program
             }
 
         } while (true);
-       
+        
         
     }
     static void EliminarEstudiantes()

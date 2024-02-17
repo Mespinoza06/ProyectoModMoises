@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Modificado por Moises")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19454c94c07722ad61959f31d61a172a32ac930c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Modificado por Moises")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Modificado por Moises")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

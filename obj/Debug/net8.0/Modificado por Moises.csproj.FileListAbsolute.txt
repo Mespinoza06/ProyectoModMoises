@@ -12,3 +12,4 @@ C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\obj\De
 C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\obj\Debug\net8.0\Modificado por Moises.pdb
 C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\obj\Debug\net8.0\Modificado por Moises.genruntimeconfig.cache
 C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\obj\Debug\net8.0\ref\Modificado por Moises.dll
+C:\Users\Usuario\source\repos\Modificado por Moises\Modificado por Moises\obj\Debug\net8.0\Modificado por Moises.sourcelink.json
